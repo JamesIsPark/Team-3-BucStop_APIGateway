@@ -36,10 +36,19 @@ namespace Gateway
         {
             try
             {
+                // When running in Docker, uncomment
+                var SnakeTask = AddGameInfo("http://snake_service:5001", "/snake"); 
+                var TetrisTask = AddGameInfo("http://tetris_service:5002", "/tetris");
+                var PongTask = AddGameInfo("http://pong_service:5003", "/pong"); 
+                await Task.WhenAll(SnakeTask, TetrisTask, PongTask);
+
+                // When running locally (IDE), uncomment
+                /* 
                 var SnakeTask = AddGameInfo("https://localhost:1948", "/Snake" ); //Snake 
                 var Tetristask = AddGameInfo("https://localhost:2626", "/Tetris"); //Tetris
-                var PongTask = AddGameInfo("https://localhost:1941", "Pong"); //Pong
+                var PongTask = AddGameInfo("https://localhost:1941", "/Pong"); //Pong
                 await Task.WhenAll(SnakeTask, Tetristask, PongTask);
+                */
                 return TheInfo;
             }
             catch (Exception ex)

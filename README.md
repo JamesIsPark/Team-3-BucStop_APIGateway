@@ -1,9 +1,9 @@
 # APIGateway
-### A Team [Redacted] Project
+### Team Index Three
 ### Members:
-> Kurt Brewer, Josh Rucevice, Charlie Shahan, Ethan Webb, Ethan Hensley, Patrick Vergason, Bryson Brandon
+> James Park, Andrew Garcia, Trent Allen, Jacob Perdue, Blake Lawson
 #### CSCI 4350
-#### Spring 2024, East Tennessee State University
+#### Fall 2024, East Tennessee State University
 
 ### Overview:
 This is the API Gateway that requests and queries from the main website, routed through a single entry-point to the [[Redacted] Project Tetris, Snake, and Pong].
